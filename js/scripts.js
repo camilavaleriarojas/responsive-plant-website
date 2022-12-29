@@ -1,7 +1,7 @@
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let header = document.querySelector('.header-3');
-let scrollTop = document.querySelector('scroll-top');
+// let scrollTop = document.querySelector('scroll-top');
 
 menu.addEventListener('click', () => {
   menu.classList.toggle('fa-times');
@@ -18,11 +18,11 @@ window.onscroll = () => {
     header.classList.remove('active');
   }
 
-  if (window.scrollY > 250) {
-    scrollTop.style.display = 'initial';
-  } else {
-    scrollTop.style.display = 'none';
-  }
+  // if (window.scrollY > 250) {
+  //   scrollTop.styles.display = 'initial';
+  // } else {
+  //   scrollTop.styles.display = 'none';
+  // }
 };
 
 var swiper = new Swiper('.home-slider', {
@@ -60,3 +60,24 @@ function countDown() {
 setInterval(function () {
   countDown();
 }, 1000);
+
+const $form = document.querySelector('#form');
+const $buttonMailTo = document.querySelector('#sendMail');
+const username = document.getElementById('name');
+const email = document.getElementById('email');
+const number = document.getElementById('number');
+const message = document.getElementById('message');
+
+$form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this);
+  $buttonMailTo.setAttribute(
+    'href',
+    `mailto:camilavaleriarojas@hotmail.com?subject=${form.get(
+      'name'
+    )}${form.get('email')}${form.get('number')}&body=${form.get('message')}`
+  );
+  $buttonMailTo.click();
+}

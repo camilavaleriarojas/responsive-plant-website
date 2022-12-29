@@ -397,25 +397,31 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <form action="">
+        <form action="" id="form">
           <div class="inputBox">
-            <input type="text" required />
+            <input type="text" name="name" id="name" />
             <label>name</label>
           </div>
           <div class="inputBox">
-            <input type="email" required />
-            <label>emial</label>
+            <input type="email" name="email" id="email" />
+            <label>email</label>
           </div>
           <div class="inputBox">
-            <input type="number" required />
+            <input type="number" name="number" id="number" />
             <label>number</label>
           </div>
           <div class="inputBox">
-            <textarea required name="" id="" cols="30" rows="10"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              cols="30"
+              rows="10"
+            ></textarea>
             <label>message</label>
           </div>
           <input type="submit" value="send message" class="btn" />
         </form>
+        <a href="mailto:camilavaleriarojas@hotmail.com" id="sendMail">Mail</a>
       </div>
     </section>
 

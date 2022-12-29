@@ -513,10 +513,15 @@ footer {
   text-transform: none;
   color: #333;
 }
-
+/*
 .contact .row form .inputBox input:focus,
 .contact .row form .inputBox textarea:focus {
   border-color: var(--green);
+} */
+
+.contact .row form .inputBox input:focus,
+.contact .row form .inputBox textarea:focus {
+  outline: 0;
 }
 
 .contact .row form .inputBox textarea {
@@ -538,6 +543,10 @@ footer {
   top: -0.1rem;
   font-size: 1.5rem;
   color: #666;
+}
+
+#sendMail {
+  opacity: 0;
 }
 
 .footer .box-container {
